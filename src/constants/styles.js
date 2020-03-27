@@ -5,8 +5,8 @@ export const color = {
   primary: "#007aff",
 
   // monochrome
-  black: "#414141",
-  gray9: "#5e5e5e",
+  black: "#1b1b1b",
+  gray9: "#717171",
   gray8: "#b7b7b7",
   gray7: "#ededed",
   gray6: "#fafafa",
@@ -29,20 +29,23 @@ export const spacing = {
 }
 export const typography = {
   family: {
-    primary: `-apple-system, BlinkMacSystemFont, "Inter", sans-serif`,
+    primary: `-apple-system, BlinkMacSystemFont, 'Inter', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif`,
     code: `"IBM Plex Mono", monospace`,
   },
   weight: {
     light: "300",
     regular: "400",
-    medium: "500",
+    medium: "600",
     bold: "700",
   },
   size: {
     s1: 1.2,
     s2: 1.4,
     m1: 1.6,
-    m2: 2.1,
+    m2: 1.8,
+    m3: 2.1,
     l1: 3.2,
     l2: 4.8,
     l3: 6.4,
@@ -70,5 +73,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     color: ${color.black};
     font-family: ${typography.family.primary};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 `
