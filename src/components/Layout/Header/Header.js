@@ -1,40 +1,40 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import { Link } from "gatsby"
+import { FiSearch } from "react-icons/fi"
+import { IoMdMoon } from "react-icons/io"
+import {
+  Wrapper,
+  Navigation,
+  LinkWrapper,
+  IconContainer,
+  activeStyle,
+} from "./Header.module"
 
-export const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+export const Header = () => (
+  <Wrapper>
+    <Navigation>
+      <IconContainer>
+        <FiSearch />
+      </IconContainer>
+
+      <LinkWrapper>
+        <Link activeStyle={activeStyle} to="/">
+          Home
         </Link>
-      </h1>
-    </div>
-  </header>
+        <Link activeStyle={activeStyle} to="/blog">
+          Blog
+        </Link>
+        <Link activeStyle={activeStyle} to="/projects">
+          Projects
+        </Link>
+        <Link activeStyle={activeStyle} to="/contact">
+          Contact
+        </Link>
+      </LinkWrapper>
+
+      <IconContainer>
+        <IoMdMoon />
+      </IconContainer>
+    </Navigation>
+  </Wrapper>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
