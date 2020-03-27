@@ -56,7 +56,7 @@ const IconContainer = styled.div`
 
 const activeStyle = {
   fontWeight: `${typography.weight.medium}`,
-  color: `${color.black}`,
+  color: `${color.primary}`,
 }
 
 export { Wrapper, Navigation, LinkWrapper, IconContainer, activeStyle }
