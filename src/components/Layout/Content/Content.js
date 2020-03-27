@@ -8,8 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { GlobalStyle } from "../../../constants/styles"
 import { Footer, Header } from "../index"
+import { GlobalStyle } from "../../../constants/styles"
+import { Wrapper, ContentWrapper } from "./Content.module"
 
 export const Content = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,17 +26,13 @@ export const Content = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
+      <Wrapper>
+        <ContentWrapper>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <main>{children}</main>
+        </ContentWrapper>
         <Footer />
-      </div>
+      </Wrapper>
     </>
   )
 }
