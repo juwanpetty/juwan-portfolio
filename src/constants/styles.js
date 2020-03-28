@@ -18,8 +18,8 @@ export const spacing = {
     xsmall: 8,
     small: 12,
     xmedium: 16,
-    medium: 24,
-    large: 40,
+    medium: 32,
+    large: 48,
     xlarge: 60,
   },
   borderRadius: {
