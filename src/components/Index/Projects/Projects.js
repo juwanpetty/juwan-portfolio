@@ -1,28 +1,27 @@
 import React from "react"
 import {
   Wrapper,
-  Header,
   ProjectList,
   Project,
   Image,
   Title,
   Description,
 } from "./Projects.module"
-import { Link } from "gatsby"
+import { HeaderText, Paragraph, TextAside, LinkText } from "../../Common/index"
 
 export const Projects = () => (
   <Wrapper>
-    <Header>
-      <h2>Projects</h2>
+    <TextAside>
+      <HeaderText>Projects</HeaderText>
       <div>
-        <p>
+        <Paragraph>
           I like to stay busy and always have a project in the works. Take a
           look at some of the applications, articles and companies I've
           dedicated my time to.
-        </p>
-        <Link>See all projects</Link>
+        </Paragraph>
+        <LinkText>See all projects</LinkText>
       </div>
-    </Header>
+    </TextAside>
 
     <ProjectList>
       <Project>
