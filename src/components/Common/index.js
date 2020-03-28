@@ -1,4 +1,5 @@
-export * from "./TextAside/TextAside"
+export * from "./OneColumn/OneColumn"
+export * from "./TwoColumn/TwoColumn"
 export * from "./Paragraph/Paragraph"
 export * from "./HeaderText/HeaderText"
 export * from "./LinkText/LinkText"
