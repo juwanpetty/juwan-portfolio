@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { color, typography, spacing } from "../../../constants/styles"
 
-const Wrapper = styled.header`
+const Wrapper = styled.div`
   display: grid;
   grid-template-rows: auto auto;
   grid-gap: 64px;
