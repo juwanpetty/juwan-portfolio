@@ -7,12 +7,12 @@ import {
   Title,
   Description,
 } from "./Projects.module"
-import { HeaderText, Paragraph, TextAside, LinkText } from "../../Common/"
+import { HeaderText, Paragraph, LinkText, OneColumn } from "../../Common/"
 
 export const Projects = () => (
   <Wrapper>
-    <TextAside>
-      <HeaderText>Projects</HeaderText>
+    <OneColumn>
+      <HeaderText>Latest work</HeaderText>
       <div>
         <Paragraph>
           I like to stay busy and always have a project in the works. Take a
@@ -21,7 +21,7 @@ export const Projects = () => (
         </Paragraph>
         <LinkText>See all projects</LinkText>
       </div>
-    </TextAside>
+    </OneColumn>
 
     <ProjectList>
       <Project>

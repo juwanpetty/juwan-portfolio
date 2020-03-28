@@ -2,7 +2,7 @@ import React from "react"
 
 import SEO from "../components/seo"
 import { Content } from "../components/Layout"
-import { Heading, Projects } from "../components/Index"
+import { Heading, Projects, Posts } from "../components/Index"
 // import Image from "../components/image"
 
 const IndexPage = () => (
@@ -10,6 +10,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Heading />
     <Projects />
+    <Posts />
     {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div> */}
