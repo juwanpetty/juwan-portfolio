@@ -23,8 +23,9 @@ export const spacing = {
     xlarge: 60,
   },
   borderRadius: {
-    xsmall: 1,
-    small: 3,
+    small: 1,
+    medium: 3,
+    large: 6,
   },
 }
 export const typography = {
