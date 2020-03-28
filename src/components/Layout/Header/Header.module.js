@@ -46,17 +46,13 @@ const IconContainer = styled.div`
   }
 
   &:hover {
-    background: ${color.secondary};
-
-    svg {
-      color: ${color.primary};
-    }
+    background: ${color.gray7};
   }
 `
 
 const activeStyle = {
   fontWeight: `${typography.weight.medium}`,
-  color: `${color.primary}`,
+  color: `${color.black}`,
 }
 
 export { Wrapper, Navigation, LinkWrapper, IconContainer, activeStyle }

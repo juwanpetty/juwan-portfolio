@@ -3,10 +3,9 @@ import { createGlobalStyle } from "styled-components"
 export const color = {
   // palette
   primary: "#007aff",
-  secondary: "#e0eeff",
 
   // monochrome
-  black: "#1b1b1b",
+  black: "#414141",
   gray9: "#717171",
   gray8: "#b7b7b7",
   gray7: "#ededed",
