@@ -1,11 +1,20 @@
 import styled from "styled-components"
-import { typography, color } from "../../../constants/styles"
+import { typography, color, spacing } from "../../../constants/styles"
 
 const Wrapper = styled.div`
   display: grid;
   grid-gap: 96px;
   grid-template-rows: auto auto;
   padding: 96px 0;
+`
+
+const TopFooter = styled.div`
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+  & > :last-child {
+    text-align: right;
+  }
 `
 
 const ListWrapper = styled.div`
@@ -35,4 +44,17 @@ const List = styled.div`
   }
 `
 
-export { Wrapper, List, ListWrapper }
+const IconContainer = styled.div`
+  display: inline-block;
+  padding: ${spacing.padding.xsmall}px ${spacing.padding.small}px;
+  border-radius: ${spacing.borderRadius.medium}px;
+  cursor: pointer;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    color: ${color.black};
+  }
+`
+
+export { Wrapper, List, ListWrapper, TopFooter, IconContainer }
