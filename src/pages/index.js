@@ -1,18 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import { Content } from "../components/Layout/index"
-import { Heading } from "../components/Index/index"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import { Content } from "../components/Layout/index"
+import { Heading, Projects } from "../components/Index/index"
+// import Image from "../components/image"
 
 const IndexPage = () => (
   <Content>
     <SEO title="Home" />
     <Heading />
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    <Projects />
+    {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
-    </div>
+    </div> */}
   </Content>
 )
 
