@@ -13,7 +13,7 @@ import { TwoColumn, HeaderText, Paragraph, LinkText } from "../../Common"
 export const Posts = () => (
   <Wrapper>
     <TwoColumn>
-      <HeaderText>Recent thoughts</HeaderText>
+      <HeaderText>Recent posts</HeaderText>
       <div>
         <Paragraph>
           I enjoy taking some time to think about how we work, design and live,
