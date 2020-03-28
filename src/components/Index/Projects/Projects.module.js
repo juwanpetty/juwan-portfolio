@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-rows: auto auto;
   grid-gap: 64px;
-  margin-bottom: 96px;
+  margin-bottom: 128px;
 `
 
 const ProjectList = styled.ul`
