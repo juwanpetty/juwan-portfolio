@@ -36,7 +36,7 @@ const LinkWrapper = styled.div`
 
 const IconContainer = styled.div`
   padding: ${spacing.padding.xsmall}px ${spacing.padding.small}px;
-  border-radius: ${spacing.borderRadius.small}px;
+  border-radius: ${spacing.borderRadius.medium}px;
   cursor: pointer;
 
   svg {
