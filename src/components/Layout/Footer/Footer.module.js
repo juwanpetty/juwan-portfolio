@@ -35,21 +35,4 @@ const List = styled.div`
   }
 `
 
-const Social = styled.div`
-  padding: 0;
-  margin: 0;
-
-  a {
-    text-decoration: none;
-
-    &:not(:last-child) {
-      margin-right: 24px;
-    }
-
-    svg {
-      fill: ${color.gray9};
-    }
-  }
-`
-
-export { Wrapper, List, ListWrapper, Social }
+export { Wrapper, List, ListWrapper }

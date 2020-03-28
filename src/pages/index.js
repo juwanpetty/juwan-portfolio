@@ -1,8 +1,8 @@
 import React from "react"
 
 import SEO from "../components/seo"
-import { Content } from "../components/Layout/index"
-import { Heading, Projects } from "../components/Index/index"
+import { Content } from "../components/Layout"
+import { Heading, Projects } from "../components/Index"
 // import Image from "../components/image"
 
 const IndexPage = () => (

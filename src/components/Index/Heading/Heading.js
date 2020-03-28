@@ -1,17 +1,6 @@
 import React from "react"
-import DribbbleIcon from "../../../assets/dribbble-icon.svg"
-import GithubIcon from "../../../assets/github-icon.svg"
-import InstagramIcon from "../../../assets/instagram-icon.svg"
-import MediumIcon from "../../../assets/medium-icon.svg"
-import TwitterIcon from "../../../assets/twitter-icon.svg"
-import {
-  Wrapper,
-  Social,
-  Title,
-  ProfilePicture,
-  Bio,
-  Me,
-} from "./Heading.module"
+import { Wrapper, Title, ProfilePicture, Bio, Me } from "./Heading.module"
+import { Social } from "../../Common"
 
 export const Heading = () => (
   <Wrapper>
@@ -33,23 +22,6 @@ export const Heading = () => (
       </div>
       <ProfilePicture />
     </Bio>
-
-    <Social>
-      <a href="www.google.com">
-        <DribbbleIcon />
-      </a>
-      <a href="www.google.com">
-        <GithubIcon />
-      </a>
-      <a href="www.google.com">
-        <InstagramIcon />
-      </a>
-      <a href="www.google.com">
-        <MediumIcon />
-      </a>
-      <a href="www.google.com">
-        <TwitterIcon />
-      </a>
-    </Social>
+    <Social />
   </Wrapper>
 )

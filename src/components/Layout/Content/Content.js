@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Footer, Header } from "../index"
+import { Footer, Header } from "../"
 import { GlobalStyle } from "../../../constants/styles"
 import { Wrapper, ContentWrapper } from "./Content.module"
 

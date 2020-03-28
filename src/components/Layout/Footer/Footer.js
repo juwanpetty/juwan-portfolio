@@ -1,11 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import DribbbleIcon from "../../../assets/dribbble-icon.svg"
-import GithubIcon from "../../../assets/github-icon.svg"
-import InstagramIcon from "../../../assets/instagram-icon.svg"
-import MediumIcon from "../../../assets/medium-icon.svg"
-import TwitterIcon from "../../../assets/twitter-icon.svg"
-import { Wrapper, List, ListWrapper, Social } from "./Footer.module"
+import { Wrapper, List, ListWrapper } from "./Footer.module"
+import { Social } from "../../Common"
 
 const LinkGroup = ({ header, children }) => (
   <List>
@@ -31,22 +27,6 @@ export const Footer = () => (
         <Link to="/rss">RSS</Link>
       </LinkGroup>
     </ListWrapper>
-    <Social>
-      <a href="www.google.com">
-        <DribbbleIcon />
-      </a>
-      <a href="www.google.com">
-        <GithubIcon />
-      </a>
-      <a href="www.google.com">
-        <InstagramIcon />
-      </a>
-      <a href="www.google.com">
-        <MediumIcon />
-      </a>
-      <a href="www.google.com">
-        <TwitterIcon />
-      </a>
-    </Social>
+    <Social />
   </Wrapper>
 )
