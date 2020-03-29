@@ -25,8 +25,8 @@ export const Projects = () => (
 
     <ProjectList>
       <Project>
-        <Image></Image>
-        <Title>
+        <Image to="/project"></Image>
+        <Title to="/project">
           <h3>Feather</h3>
         </Title>
         <Description>
@@ -35,8 +35,8 @@ export const Projects = () => (
         </Description>
       </Project>
       <Project>
-        <Image></Image>
-        <Title>
+        <Image to="/project"></Image>
+        <Title to="/project">
           <h3>Tabio</h3>
         </Title>
         <Description>
@@ -44,8 +44,8 @@ export const Projects = () => (
         </Description>
       </Project>
       <Project>
-        <Image></Image>
-        <Title>
+        <Image to="/project"></Image>
+        <Title to="/project">
           <h3>Analog</h3>
         </Title>
         <Description>
