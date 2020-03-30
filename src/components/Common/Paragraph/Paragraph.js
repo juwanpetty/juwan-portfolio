@@ -7,5 +7,8 @@ export const Paragraph = styled.p`
   line-height: 1.5;
   font-weight: ${typography.weight.regular};
   margin: 0;
-  margin-bottom: 16px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 `
