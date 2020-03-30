@@ -7,7 +7,7 @@ import {
   Title,
   Description,
 } from "./Projects.module"
-import { HeaderText, Paragraph, LinkText, OneColumn } from "../../Common/"
+import { HeaderText, Paragraph, OneColumn } from "../../Common/"
 
 export const Projects = () => (
   <Wrapper>
