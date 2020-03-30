@@ -10,6 +10,13 @@ import {
 } from "./Footer.module"
 import { Social } from "../../Common"
 
+const scrollToTop = () => {
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  })
+}
+
 const LinkGroup = ({ header, children }) => (
   <List>
     <h4>{header}</h4>
@@ -35,7 +42,7 @@ export const Footer = () => (
         </LinkGroup>
       </ListWrapper>
       <div>
-        <IconContainer>
+        <IconContainer onClick={() => scrollToTop()}>
           <FiArrowUp />
         </IconContainer>
       </div>
