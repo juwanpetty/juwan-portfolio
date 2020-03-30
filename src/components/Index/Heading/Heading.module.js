@@ -53,12 +53,18 @@ const Title = styled.h1`
 
   font-size: 18px;
   line-height: 155%;
-  font-weight: 700;
+  font-weight: 600;
 
   a {
-    color: ${color.black};
     text-decoration: none;
-    border-bottom: 1px solid ${color.black};
+    color: ${color.black};
+    font-size: inherit;
+    line-height: 1.25;
+    font-weight: inherit;
+
+    border-bottom: 1px solid;
+    border-bottom-color: currentcolor;
+    border-color: currentColor;
   }
 `
 
