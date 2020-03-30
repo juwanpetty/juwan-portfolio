@@ -24,9 +24,7 @@ export const Header = () => (
         <Link activeStyle={activeStyle} to="/blog">
           Blog
         </Link>
-        <Link activeStyle={activeStyle} to="/contact">
-          Contact
-        </Link>
+        <a href="mailto:jchpetty@gmail.com">Contact</a>
       </LinkWrapper>
 
       <IconContainer>

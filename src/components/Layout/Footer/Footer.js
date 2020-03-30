@@ -31,7 +31,7 @@ export const Footer = () => (
         <LinkGroup header="General">
           <Link to="/">Home</Link>
           <Link to="/blog">Blog</Link>
-          <Link to="/contact">Contact</Link>
+          <a href="mailto:jchpetty@gmail.com">Contact</a>
         </LinkGroup>
         <LinkGroup header="Extras">
           <Link to="/uses">Uses</Link>
