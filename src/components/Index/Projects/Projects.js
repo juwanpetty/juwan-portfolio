@@ -19,7 +19,6 @@ export const Projects = () => (
           look at some of the applications, articles and companies I've
           dedicated my time to.
         </Paragraph>
-        <LinkText>See all projects</LinkText>
       </div>
     </OneColumn>
 
