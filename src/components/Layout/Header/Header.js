@@ -24,9 +24,6 @@ export const Header = () => (
         <Link activeStyle={activeStyle} to="/blog">
           Blog
         </Link>
-        <Link activeStyle={activeStyle} to="/projects">
-          Projects
-        </Link>
         <Link activeStyle={activeStyle} to="/contact">
           Contact
         </Link>
