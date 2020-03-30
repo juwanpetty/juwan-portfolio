@@ -8,11 +8,11 @@ import {
   PostDate,
   Tag,
 } from "./Posts.module"
-import { TextAside, HeaderText, Paragraph, LinkText } from "../../Common"
+import { TwoColumn, HeaderText, Paragraph, LinkText } from "../../Common"
 
 export const Posts = () => (
   <Wrapper>
-    <TextAside>
+    <TwoColumn>
       <HeaderText>Recent posts</HeaderText>
       <div>
         <Paragraph>
@@ -22,7 +22,7 @@ export const Posts = () => (
         </Paragraph>
         <LinkText>See all posts</LinkText>
       </div>
-    </TextAside>
+    </TwoColumn>
 
     <PostList>
       <Post>
