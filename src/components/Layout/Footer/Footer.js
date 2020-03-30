@@ -29,7 +29,7 @@ export const Footer = () => (
     <TopFooter>
       <ListWrapper>
         <LinkGroup header="General">
-          <Link to="/blog">Home</Link>
+          <Link to="/">Home</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/contact">Contact</Link>
         </LinkGroup>
