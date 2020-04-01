@@ -24,9 +24,9 @@ export const Projects = () => (
 
     <ProjectList>
       <Project>
-        <Image to="/project"></Image>
-        <Title to="/project">
-          <h3>Feather</h3>
+        <Image to="/headlines"></Image>
+        <Title to="/headlines">
+          <h3>Headlines</h3>
         </Title>
         <Description>
           Simply beautiful open source icons designed with a focus on
