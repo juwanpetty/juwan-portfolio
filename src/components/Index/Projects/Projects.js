@@ -29,8 +29,8 @@ export const Projects = () => (
           <h3>Headlines</h3>
         </Title>
         <Description>
-          Simply beautiful open source icons designed with a focus on
-          simplicity, consistency, and usability.
+          A browser extension built to deliver 50+ news sources to your new tab
+          page.
         </Description>
       </Project>
       <Project>

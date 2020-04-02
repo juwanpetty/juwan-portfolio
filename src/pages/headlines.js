@@ -11,8 +11,9 @@ import {
   HeaderText,
 } from "../components/Common/"
 
-import components from "../images/design-components.jpg"
-import components1 from "../images/design-components-2.jpg"
+import headlinesPage from "../images/headlines.png"
+import headlinesSidebar from "../images/headlines-sidebar.png"
+import headlinesCard from "../images/headlines-card.png"
 
 const Headlines = () => (
   <Content>
@@ -57,7 +58,7 @@ const Headlines = () => (
       </ul>
     </Meta>
 
-    <Image src={components} alt="Forecast Application Work in Progress" />
+    <Image src={headlinesPage} alt="Headlines browser application" />
 
     <OneColumn style={{ marginBottom: "48px" }}>
       <HeaderText>Project Purpose and Goal</HeaderText>
@@ -76,7 +77,7 @@ const Headlines = () => (
     </OneColumn>
 
     <TextAside>
-      <Image src={components} alt="Forecast Application Work in Progress" />
+      <Image src={headlinesCard} alt="Headlines card" />
       <div>
         <HeaderText>Web Technologies and Explanation</HeaderText>
         <Paragraph>
@@ -102,7 +103,7 @@ const Headlines = () => (
       </div>
     </TextAside>
 
-    <Image src={components1} alt="Forecast Application Work in Progress" />
+    <Image src={headlinesSidebar} alt="Headlines sidebar" />
 
     <TwoColumn>
       <HeaderText>Final Thoughts</HeaderText>
