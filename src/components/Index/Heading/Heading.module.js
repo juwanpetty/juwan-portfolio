@@ -1,5 +1,10 @@
 import styled from "styled-components"
-import { color, typography, spacing } from "../../../constants/styles"
+import {
+  color,
+  typography,
+  spacing,
+  breakpoint,
+} from "../../../constants/styles"
 
 const Wrapper = styled.div`
   margin-top: 32px;
@@ -22,6 +27,10 @@ const Bio = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   grid-gap: 96px;
+
+  @media (max-width: ${breakpoint.mobileMin}) {
+    grid-gap: 0;
+  }
 `
 
 const Me = styled.div`
@@ -74,7 +83,6 @@ const Social = styled.div`
 
   a {
     text-decoration: none;
-
     &:not(:last-child) {
       margin-right: 24px;
     }
@@ -93,6 +101,10 @@ const ProfilePicture = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: ${breakpoint.mobileMax}) {
+    display: none;
+  }
 `
 
 export { Wrapper, Social, Title, ProfilePicture, Bio, Me }

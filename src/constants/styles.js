@@ -54,6 +54,17 @@ export const typography = {
   },
 }
 
+export const breakpoint = {
+  mobileMin: "590px",
+  mobileMax: "700px",
+  tabletMin: "700px",
+  tabletMax: "1199px",
+  desktopMin: "1200px",
+
+  // 700px
+  // 590px
+}
+
 export const GlobalStyle = createGlobalStyle`
   html {
     -webkit-box-sizing: border-box;

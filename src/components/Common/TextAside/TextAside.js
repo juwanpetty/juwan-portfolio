@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { breakpoint } from "../../../constants/styles"
 
 export const TextAside = styled.div`
   display: grid;
@@ -12,5 +13,14 @@ export const TextAside = styled.div`
 
   h2 {
     margin-bottom: 16px;
+  }
+
+  @media (max-width: ${breakpoint.mobileMax}) {
+    grid-template-columns: 1fr;
+
+    img {
+      width: 60%;
+      margin: 0 auto;
+    }
   }
 `

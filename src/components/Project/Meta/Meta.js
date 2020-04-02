@@ -1,8 +1,9 @@
 import styled from "styled-components"
-import { typography, color } from "../../../constants/styles"
+import { typography, color, breakpoint } from "../../../constants/styles"
 
 export const Meta = styled.div`
   display: grid;
+  grid-gap: 32px;
   grid-template-columns: repeat(4, 1fr);
   margin-bottom: 96px;
 
@@ -38,5 +39,14 @@ export const Meta = styled.div`
     border-bottom: 1px solid;
     border-bottom-color: currentcolor;
     border-color: currentColor;
+  }
+
+  @media (max-width: ${breakpoint.mobileMax}) {
+    grid-gap: 32px;
+    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+
+    margin-bottom: 96px;
+
+    display: none;
   }
 `
