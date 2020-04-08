@@ -17,10 +17,11 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - {
-          label: "Tags",
-          name: "tags",
-          widget: "list",
-          default: ["development"],
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["Design", "Development", "Journal"],
+          default: ["Development"],
         }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
