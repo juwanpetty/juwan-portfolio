@@ -1,10 +1,10 @@
 ---
 title: Using the Picture-in-Picture API
-date: 2020-04-08T15:31:28.961Z
-description: >-
-  Picture-in-Picture allows users to pop a video out into a floating window that
-  always stays on top of others windows, so that they can keep watching it,
-  while interacting with other sites, or applications.
+date: "2020-04-08T15:31:28.961Z"
+category: Development
+description: Picture-in-Picture allows users to pop a video out into a floating
+  window that always stays on top of others windows, so that they can keep
+  watching it, while interacting with other sites, or applications.
 ---
 > If you want to see the Picture-in-Picture in action, here's a CodePen [link](https://codepen.io/juwanpetty/pen/JwaXaL) to try it out.
 
