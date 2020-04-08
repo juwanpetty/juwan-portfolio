@@ -3,7 +3,7 @@ import React from "react"
 import SEO from "../components/seo"
 import { Content } from "../components/Layout"
 import { spacing, color, typography } from "../constants/styles"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import { LinkText } from "../components/Common"
 
@@ -80,7 +80,7 @@ const Tag = styled(Link)`
   border-color: currentColor;
 `
 
-const BlogPage = () => (
+export default ({ data }) => (
   <Content>
     <SEO title="Blog" />
     <Header>
@@ -90,72 +90,38 @@ const BlogPage = () => (
       <LinkText to="/blog">Journal</LinkText>
     </Header>
     <PostList>
-      <Post>
-        <Title to="/post">
-          <h3>Understanding Generators in JavaScript</h3>
-        </Title>
-        <PostDate>
-          March 2020 - <Tag>Development</Tag>
-        </PostDate>
-        <Description>
-          A leader can be the head of a household, the head of a classroom, the
-          head of company, and yes, the head of a country.
-        </Description>
-      </Post>
-      <Post>
-        <Title to="/post">
-          <h3>
-            macOS Catalina 10.15: Setting up a Brand New Mac for Development
-          </h3>
-        </Title>
-        <PostDate>
-          March 2020 - <Tag>Development</Tag>
-        </PostDate>
-        <Description>
-          A leader can be the head of a household, the head of a classroom, the
-          head of company, and yes, the head of a country.
-        </Description>
-      </Post>
-      <Post>
-        <Title to="/post">
-          <h3>Understanding Map and Set in JavaScript</h3>
-        </Title>
-        <PostDate>
-          March 2020 - <Tag>Development</Tag>
-        </PostDate>
-        <Description>
-          A leader can be the head of a household, the head of a classroom, the
-          head of company, and yes, the head of a country.
-        </Description>
-      </Post>
-      <Post>
-        <Title to="/post">
-          <h3>Understanding Generators in JavaScript</h3>
-        </Title>
-        <PostDate>
-          March 2020 - <Tag>Development</Tag>
-        </PostDate>
-        <Description>
-          A leader can be the head of a household, the head of a classroom, the
-          head of company, and yes, the head of a country.
-        </Description>
-      </Post>
-      <Post>
-        <Title to="/post">
-          <h3>
-            macOS Catalina 10.15: Setting up a Brand New Mac for Development
-          </h3>
-        </Title>
-        <PostDate>
-          March 2020 - <Tag>Development</Tag>
-        </PostDate>
-        <Description>
-          A leader can be the head of a household, the head of a classroom, the
-          head of company, and yes, the head of a country.
-        </Description>
-      </Post>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <Post key={node.id}>
+          <Title to={node.fields.slug}>
+            <h3>{node.frontmatter.title}</h3>
+          </Title>
+          <PostDate>
+            {node.frontmatter.date} - <Tag>Development</Tag>
+          </PostDate>
+          <Description>{node.excerpt}</Description>
+        </Post>
+      ))}
     </PostList>
   </Content>
 )
 
-export default BlogPage
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          excerpt
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`
