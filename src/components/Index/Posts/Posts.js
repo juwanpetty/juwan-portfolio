@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import {
   Wrapper,
   PostList,
@@ -11,9 +10,7 @@ import {
 } from "./Posts.module"
 import { TwoColumn, HeaderText, Paragraph, LinkText } from "../../Common"
 
-export const Posts = ({ data }) => {
-  console.log({ data })
-
+export const Posts = () => {
   return (
     <Wrapper>
       <TwoColumn>
@@ -41,36 +38,7 @@ export const Posts = ({ data }) => {
             the head of company, and yes, the head of a country.
           </Description>
         </Post>
-        {/* {data.allMarkdownRemark.edges.map(({ node }) => (
-        <Post key={node.id}>
-          <Title to={node.fields.slug}>
-            <h3>{node.frontmatter.title}</h3>
-          </Title>
-          <PostDate>
-            {node.frontmatter.date} - <Tag>Development</Tag>
-          </PostDate>
-          <Description>{node.excerpt}</Description>
-        </Post>
-      ))} */}
       </PostList>
     </Wrapper>
   )
 }
-
-export const query = graphql`
-  query {
-    allMarkdownRemark {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`

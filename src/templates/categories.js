@@ -1,11 +1,10 @@
 import React from "react"
-
-import SEO from "../components/seo"
-import { Content } from "../components/Layout"
-import { spacing, color, typography } from "../constants/styles"
-import { Link, graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import { LinkText } from "../components/Common"
+import { Content } from "../components/Layout"
+import SEO from "../components/seo"
+import { spacing, color, typography } from "../constants/styles"
 
 const Header = styled.div`
   margin: 32px 0 48px;
@@ -80,49 +79,58 @@ const Tag = styled(Link)`
   border-color: currentColor;
 `
 
-export default ({ data }) => (
-  <Content>
-    <SEO title="Blog" />
-    <Header>
-      <LinkText to="/blog/">All</LinkText>
-      <LinkText to="/blog/design">Design</LinkText>
-      <LinkText to="/blog/development">Development</LinkText>
-      <LinkText to="/blog/journal">Journal</LinkText>
-    </Header>
-    <PostList>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <Post key={node.id}>
-          <Title to={node.fields.slug}>
-            <h3>{node.frontmatter.title}</h3>
-          </Title>
-          <PostDate>
-            {node.frontmatter.date} -{" "}
-            <Tag to={`/blog/${node.frontmatter.category.toLowerCase()}`}>
-              {node.frontmatter.category}
-            </Tag>
-          </PostDate>
-          <Description>{node.excerpt}</Description>
-        </Post>
-      ))}
-    </PostList>
-  </Content>
-)
+export default ({ pageContext, data }) => {
+  const { category } = pageContext
+  const { edges } = data.allMarkdownRemark
 
-export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  return (
+    <Content>
+      <SEO title="Blog" />
+      <Header>
+        <LinkText to="/blog/">All</LinkText>
+        <LinkText to="/blog/design">Design</LinkText>
+        <LinkText to="/blog/development">Development</LinkText>
+        <LinkText to="/blog/journal">Journal</LinkText>
+      </Header>
+      <PostList>
+        {edges.map(({ node }) => {
+          const { slug } = node.fields
+          const { title, date } = node.frontmatter
+          return (
+            <Post key={slug}>
+              <Title to={slug}>
+                <h3>{title}</h3>
+              </Title>
+              <PostDate>
+                {date} -{" "}
+                <Tag to={`/blog/${category.toLowerCase()}`}>{category}</Tag>
+              </PostDate>
+              <Description>{node.excerpt}</Description>
+            </Post>
+          )
+        })}
+      </PostList>
+    </Content>
+  )
+}
+
+export const pageQuery = graphql`
+  query($category: String) {
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { category: { in: [$category] } } }
+    ) {
       totalCount
       edges {
         node {
-          id
           excerpt
+          fields {
+            slug
+          }
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
-            category
-          }
-          fields {
-            slug
           }
         }
       }
