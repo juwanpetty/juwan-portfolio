@@ -26,7 +26,7 @@ export const Posts = () => (
 
     <PostList>
       <Post>
-        <Title>
+        <Title to="/post">
           <h3>Understanding Generators in JavaScript</h3>
         </Title>
         <PostDate>
@@ -38,7 +38,7 @@ export const Posts = () => (
         </Description>
       </Post>
       <Post>
-        <Title>
+        <Title to="/post">
           <h3>
             macOS Catalina 10.15: Setting up a Brand New Mac for Development
           </h3>
@@ -52,7 +52,7 @@ export const Posts = () => (
         </Description>
       </Post>
       <Post>
-        <Title>
+        <Title to="/post">
           <h3>Understanding Map and Set in JavaScript</h3>
         </Title>
         <PostDate>

@@ -56,13 +56,9 @@ const Title = styled.h1`
   margin: 0;
   margin-bottom: 48px;
   color: ${color.black};
-  font-size: ${typography.size.l1}rem;
+  font-size: ${typography.size.m2}rem;
   font-weight: ${typography.weight.medium};
-  line-height: 1.25;
-
-  font-size: 18px;
   line-height: 155%;
-  font-weight: 600;
 
   a {
     text-decoration: none;
