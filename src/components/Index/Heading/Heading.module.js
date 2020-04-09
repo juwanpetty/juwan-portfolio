@@ -94,7 +94,6 @@ const Social = styled.div`
 `
 
 const ProfilePicture = styled.div`
-  background: #eee;
   width: 200px;
   height: 200px;
   display: flex;
