@@ -2,6 +2,7 @@ import React from "react"
 import { Wrapper, Title, ProfilePicture, Bio, Me } from "./Heading.module"
 import { Social } from "../../Common"
 import logo from "../../../images/juwan-icon.png"
+import profilePicture from "../../../images/profile-picture.jpg"
 
 export const Heading = () => (
   <Wrapper>
@@ -24,7 +25,9 @@ export const Heading = () => (
           Don't be shy, <a href="mailto:jchpetty@gmail.com">say hello</a> 👋.
         </Title>
       </div>
-      <ProfilePicture />
+      <ProfilePicture>
+        <img src={profilePicture} alt="Profile Picture" />
+      </ProfilePicture>
     </Bio>
     <Social />
   </Wrapper>
