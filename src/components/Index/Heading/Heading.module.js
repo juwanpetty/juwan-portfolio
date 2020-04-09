@@ -29,6 +29,17 @@ const Bio = styled.div`
 `
 
 const Me = styled.div`
+  display: flex;
+  align-items: center;
+
+  grid-gap: 24px;
+  margin-bottom: 32px;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
   h3 {
     font-size: ${typography.size.m2}rem;
     line-height: 18px;
@@ -43,7 +54,6 @@ const Me = styled.div`
     font-weight: ${typography.weight.regular};
     color: ${props => props.theme.gray9};
     margin: 0;
-    margin-bottom: 32px;
   }
 `
 
