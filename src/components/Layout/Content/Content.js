@@ -19,8 +19,11 @@ export const Content = ({ children }) => {
 
   const lightTheme = color.light
   const darkTheme = color.dark
+  let stored = ""
 
-  const stored = localStorage.getItem("isDarkMode")
+  if (typeof localStorage !== `undefined`) {
+    stored = localStorage.getItem("isDarkMode")
+  }
 
   const [isDarkMode, setIsDarkMode] = useState(stored === "true" ? true : false)
 
