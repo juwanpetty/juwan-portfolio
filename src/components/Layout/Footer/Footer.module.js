@@ -1,5 +1,10 @@
 import styled from "styled-components"
-import { typography, spacing, transition } from "../../../constants/styles"
+import {
+  typography,
+  spacing,
+  transition,
+  breakpoint,
+} from "../../../constants/styles"
 
 const Wrapper = styled.div`
   display: grid;
@@ -74,6 +79,10 @@ const Soon = styled.span`
   margin-left: 8px;
 
   transition: ${transition.fast};
+
+  @media (max-width: ${breakpoint.mobileMax}) {
+    display: none;
+  }
 `
 
 export { Wrapper, List, ListWrapper, TopFooter, IconContainer, Soon }
