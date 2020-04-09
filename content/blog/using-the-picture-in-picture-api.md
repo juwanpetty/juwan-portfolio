@@ -1,6 +1,6 @@
 ---
 title: Using the Picture-in-Picture API
-date: "2020-04-08T15:31:28.961Z"
+date: "2020-03-17T15:31:28.961Z"
 category: Development
 description: Picture-in-Picture allows users to pop a video out into a floating
   window that always stays on top of others windows, so that they can keep
