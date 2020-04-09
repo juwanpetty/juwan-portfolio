@@ -4,6 +4,7 @@ import styled from "styled-components"
 import SEO from "../components/seo"
 import { Content } from "../components/Layout"
 import { typography } from "../constants/styles"
+import "../constants/markdown-styles.css"
 
 const Header = styled.div`
   margin: 32px 0 96px;
@@ -15,16 +16,11 @@ const Header = styled.div`
     margin-bottom: 32px;
   }
 `
-const PostImage = styled.div`
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  background: #eee;
-`
 
-const Title = styled.div`
+const Title = styled.h1`
   font-size: ${typography.size.l1}rem;
   font-weight: ${typography.weight.medium};
+  margin-bottom: 8px;
 `
 
 const Meta = styled.div`
@@ -35,20 +31,6 @@ const Meta = styled.div`
   margin-bottom: 16px;
 `
 
-const Main = styled.div`
-  h2 {
-    padding-bottom: 4px;
-    margin-bottom: 20px;
-    font-weight: ${typography.weight.medium};
-    font-size: ${typography.size.m3}rem;
-    border-bottom: 1px solid ${props => props.theme.gray7};
-  }
-`
-
-const MarkdownContent = styled.div`
-  font-size: 100% !important;
-`
-
 export default ({ data }) => {
   const post = data.markdownRemark
 
@@ -56,15 +38,13 @@ export default ({ data }) => {
     <Content>
       <SEO title={post.frontmatter.title} />
       <Header>
-        <div>
-          <PostImage></PostImage>
-          <Title>{post.frontmatter.title}</Title>
-        </div>
-        <Meta>{post.frontmatter.date} / Share / Edit</Meta>
+        <Title>{post.frontmatter.title}</Title>
+        <Meta>{post.frontmatter.date}</Meta>
       </Header>
-      <Main>
-        <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Main>
+      <div
+        className="markdown-body"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
     </Content>
   )
 }
