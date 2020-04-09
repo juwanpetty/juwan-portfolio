@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { FiSearch } from "react-icons/fi"
+// import { FiSearch } from "react-icons/fi"
 import { IoMdMoon } from "react-icons/io"
 import {
   Wrapper,
@@ -19,9 +19,9 @@ export const Header = ({ handleIsDarkMode, isDarkMode }) => {
   return (
     <Wrapper>
       <Navigation>
-        <IconContainer>
+        {/* <IconContainer>
           <FiSearch />
-        </IconContainer>
+        </IconContainer> */}
 
         <LinkWrapper>
           <Link activeStyle={activeStyle} to="/">
