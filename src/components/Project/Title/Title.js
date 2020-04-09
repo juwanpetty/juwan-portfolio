@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { typography, breakpoint } from "../../../constants/styles"
 
 export const Title = styled.h1`
+  color: ${props => props.theme.black};
   font-size: ${typography.size.l3}rem;
   margin: 96px 0 16px;
 

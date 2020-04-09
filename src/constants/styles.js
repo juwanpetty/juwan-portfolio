@@ -1,16 +1,30 @@
 import { createGlobalStyle } from "styled-components"
 
 export const color = {
-  // palette
-  primary: "#007aff",
+  light: {
+    // palette
+    primary: "#6ab0f3",
 
-  // monochrome
-  black: "#414141",
-  gray9: "#717171",
-  gray8: "#b7b7b7",
-  gray7: "#ededed",
-  gray6: "#fafafa",
-  white: "#ffffff",
+    // monochrome
+    black: "#414141",
+    gray9: "#717171",
+    gray8: "#b7b7b7",
+    gray7: "#ededed",
+    gray6: "#fafafa",
+    white: "#ffffff",
+  },
+  dark: {
+    // palette
+    primary: "#6ab0f3",
+
+    // monochrome
+    black: "#cecece",
+    gray9: "#949495;",
+    gray8: "#b7b7b7",
+    gray7: "#1a1a1a",
+    gray6: "#fafafa",
+    white: "#202020",
+  },
 }
 
 export const spacing = {
@@ -60,9 +74,6 @@ export const breakpoint = {
   tabletMin: "700px",
   tabletMax: "1199px",
   desktopMin: "1200px",
-
-  // 700px
-  // 590px
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -83,7 +94,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    color: ${color.black};
     font-family: ${typography.family.primary};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

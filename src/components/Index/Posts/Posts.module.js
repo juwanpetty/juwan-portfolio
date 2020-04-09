@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { color, typography, spacing } from "../../../constants/styles"
+import { typography, spacing } from "../../../constants/styles"
 
 const Wrapper = styled.div`
   display: grid;
@@ -22,8 +22,8 @@ const Post = styled.li`
 
   &:not(:last-child) {
     border-bottom: 1px solid;
-    border-bottom-color: ${color.gray7};
-    border-color: ${color.gray7};
+    border-bottom-color: ${props => props.theme.gray7};
+    border-color: ${props => props.theme.gray7};
     margin-bottom: ${spacing.padding.medium}px;
   }
 `
@@ -32,7 +32,7 @@ const Title = styled(Link)`
   text-decoration: none;
 
   h3 {
-    color: ${color.black};
+    color: ${props => props.theme.black};
     display: inline-block;
     font-size: ${typography.size.m2}rem;
     line-height: 1.25;
@@ -47,7 +47,7 @@ const Title = styled(Link)`
 `
 
 const Description = styled.div`
-  color: ${color.gray9};
+  color: ${props => props.theme.gray9};
   font-size: ${typography.size.m1}rem;
   line-height: 1.5;
   font-weight: ${typography.weight.regular};
@@ -55,7 +55,7 @@ const Description = styled.div`
 `
 
 const PostDate = styled.div`
-  color: ${color.gray8};
+  color: ${props => props.theme.gray8};
   font-size: ${typography.size.s2}rem;
   line-height: 1.5;
   font-weight: ${typography.weight.regular};
@@ -64,7 +64,7 @@ const PostDate = styled.div`
 
 const Tag = styled(Link)`
   text-decoration: none;
-  color: ${color.gray8};
+  color: ${props => props.theme.gray8};
   border-bottom: 1px solid;
   border-bottom-color: currentcolor;
   border-color: currentColor;

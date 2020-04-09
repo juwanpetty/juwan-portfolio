@@ -10,26 +10,33 @@ import {
   activeStyle,
 } from "./Header.module"
 
-export const Header = () => (
-  <Wrapper>
-    <Navigation>
-      <IconContainer>
-        <FiSearch />
-      </IconContainer>
+export const Header = ({ handleIsDarkMode, isDarkMode }) => {
+  const onUpdateIsDarkMode = () => {
+    handleIsDarkMode(!isDarkMode)
+    localStorage.setItem("isDarkMode", !isDarkMode)
+  }
 
-      <LinkWrapper>
-        <Link activeStyle={activeStyle} to="/">
-          Home
-        </Link>
-        <Link activeStyle={activeStyle} to="/blog">
-          Blog
-        </Link>
-        <a href="mailto:jchpetty@gmail.com">Contact</a>
-      </LinkWrapper>
+  return (
+    <Wrapper>
+      <Navigation>
+        <IconContainer>
+          <FiSearch />
+        </IconContainer>
 
-      <IconContainer>
-        <IoMdMoon />
-      </IconContainer>
-    </Navigation>
-  </Wrapper>
-)
+        <LinkWrapper>
+          <Link activeStyle={activeStyle} to="/">
+            Home
+          </Link>
+          <Link activeStyle={activeStyle} to="/blog" partiallyActive={true}>
+            Blog
+          </Link>
+          <a href="mailto:jchpetty@gmail.com">Contact</a>
+        </LinkWrapper>
+
+        <IconContainer onClick={() => onUpdateIsDarkMode()}>
+          <IoMdMoon />
+        </IconContainer>
+      </Navigation>
+    </Wrapper>
+  )
+}

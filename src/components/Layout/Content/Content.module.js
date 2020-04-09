@@ -1,6 +1,11 @@
 import styled from "styled-components"
 import { spacing } from "../../../constants/styles"
 
+const Container = styled.div`
+  background: ${props => props.theme.white};
+  width: 100%;
+`
+
 const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 850px;
@@ -17,4 +22,4 @@ const ContentWrapper = styled.div`
   flex-grow: 1;
 `
 
-export { Wrapper, ContentWrapper }
+export { Wrapper, ContentWrapper, Container }

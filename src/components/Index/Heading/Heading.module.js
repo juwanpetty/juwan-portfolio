@@ -1,10 +1,5 @@
 import styled from "styled-components"
-import {
-  color,
-  typography,
-  spacing,
-  breakpoint,
-} from "../../../constants/styles"
+import { typography, spacing, breakpoint } from "../../../constants/styles"
 
 const Wrapper = styled.div`
   margin-top: 32px;
@@ -19,7 +14,7 @@ const Wrapper = styled.div`
     left: 0;
     width: 100%;
     height: 1px;
-    background: ${color.gray7};
+    background: ${props => props.theme.gray7};
   }
 `
 
@@ -38,7 +33,7 @@ const Me = styled.div`
     font-size: ${typography.size.m2}rem;
     line-height: 18px;
     font-weight: ${typography.weight.medium};
-    color: ${color.black};
+    color: ${props => props.theme.black};
     margin: 0;
     margin-bottom: 4px;
   }
@@ -46,7 +41,7 @@ const Me = styled.div`
   p {
     font-size: ${typography.size.m1}rem;
     font-weight: ${typography.weight.regular};
-    color: ${color.gray9};
+    color: ${props => props.theme.gray9};
     margin: 0;
     margin-bottom: 32px;
   }
@@ -55,14 +50,14 @@ const Me = styled.div`
 const Title = styled.h1`
   margin: 0;
   margin-bottom: 48px;
-  color: ${color.black};
+  color: ${props => props.theme.black};
   font-size: ${typography.size.m2}rem;
   font-weight: ${typography.weight.medium};
   line-height: 155%;
 
   a {
     text-decoration: none;
-    color: ${color.black};
+    color: ${props => props.theme.black};
     font-size: inherit;
     line-height: 1.25;
     font-weight: inherit;
@@ -84,7 +79,7 @@ const Social = styled.div`
     }
 
     svg {
-      fill: ${color.gray9};
+      fill: ${props => props.theme.gray9};
     }
   }
 `

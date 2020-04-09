@@ -1,16 +1,10 @@
-/**
- * Content component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
-import PropTypes from "prop-types"
+import React, { useState } from "react"
+import { ThemeProvider } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { Footer, Header } from "../"
 import { GlobalStyle } from "../../../constants/styles"
-import { Wrapper, ContentWrapper } from "./Content.module"
+import { Container, Wrapper, ContentWrapper } from "./Content.module"
+import { color } from "../../../constants/styles"
 
 export const Content = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,20 +17,31 @@ export const Content = ({ children }) => {
     }
   `)
 
+  const lightTheme = color.light
+  const darkTheme = color.dark
+
+  const stored = localStorage.getItem("isDarkMode")
+
+  const [isDarkMode, setIsDarkMode] = useState(stored === "true" ? true : false)
+
   return (
     <>
       <GlobalStyle />
-      <Wrapper>
-        <ContentWrapper>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <main>{children}</main>
-        </ContentWrapper>
-        <Footer />
-      </Wrapper>
+      <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+        <Container>
+          <Wrapper>
+            <ContentWrapper>
+              <Header
+                siteTitle={data.site.siteMetadata.title}
+                handleIsDarkMode={setIsDarkMode}
+                isDarkMode={isDarkMode}
+              />
+              <main>{children}</main>
+            </ContentWrapper>
+            <Footer />
+          </Wrapper>
+        </Container>
+      </ThemeProvider>
     </>
   )
-}
-
-Content.propTypes = {
-  children: PropTypes.node.isRequired,
 }

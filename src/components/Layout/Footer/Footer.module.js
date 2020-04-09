@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { typography, color, spacing } from "../../../constants/styles"
+import { typography, spacing } from "../../../constants/styles"
 
 const Wrapper = styled.div`
   display: grid;
@@ -27,7 +27,7 @@ const List = styled.div`
   flex-direction: column;
 
   a {
-    color: ${color.gray9};
+    color: ${props => props.theme.gray9};
     font-size: ${typography.size.m1}rem;
     font-weight: ${typography.weight.regular};
     text-decoration: none;
@@ -38,6 +38,7 @@ const List = styled.div`
   }
 
   & > h4 {
+    color: ${props => props.theme.black};
     font-size: ${typography.size.m2}rem;
     font-weight: ${typography.weight.medium};
     margin: 0 0 24px;
@@ -53,7 +54,7 @@ const IconContainer = styled.div`
   svg {
     width: 20px;
     height: 20px;
-    color: ${color.black};
+    color: ${props => props.theme.black};
   }
 `
 

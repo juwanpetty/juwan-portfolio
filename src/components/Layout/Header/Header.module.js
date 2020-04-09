@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { color, typography, spacing } from "../../../constants/styles"
+import { typography, spacing } from "../../../constants/styles"
 
 const Wrapper = styled.header`
   margin: 0 auto;
@@ -23,7 +23,7 @@ const LinkWrapper = styled.div`
   a {
     display: inline-block;
     padding: 0;
-    color: ${color.gray9};
+    color: ${props => props.theme.gray9};
     font-size: ${typography.size.m1}rem;
     font-weight: ${typography.weight.regular};
     text-decoration: none;
@@ -42,17 +42,23 @@ const IconContainer = styled.div`
   svg {
     width: 16px;
     height: 16px;
-    color: ${color.gray9};
+    color: ${props => props.theme.gray9};
   }
 
   &:hover {
-    background: ${color.gray7};
+    background: ${props => props.theme.gray7};
+  }
+
+  &:last-child {
+    svg {
+      color: ${props => props.theme.gray9};
+    }
   }
 `
 
 const activeStyle = {
   fontWeight: `${typography.weight.medium}`,
-  color: `${color.black}`,
+  color: "#6ab0f3",
 }
 
 export { Wrapper, Navigation, LinkWrapper, IconContainer, activeStyle }

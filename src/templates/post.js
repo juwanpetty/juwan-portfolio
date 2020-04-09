@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import SEO from "../components/seo"
 import { Content } from "../components/Layout"
-import { typography, color } from "../constants/styles"
+import { typography } from "../constants/styles"
 
 const Header = styled.div`
   margin: 32px 0 96px;
@@ -28,7 +28,7 @@ const Title = styled.div`
 `
 
 const Meta = styled.div`
-  color: ${color.gray9};
+  color: ${props => props.theme.gray9};
   font-size: ${typography.size.m1}rem;
   line-height: 1.5;
   font-weight: ${typography.weight.regular};
@@ -41,8 +41,12 @@ const Main = styled.div`
     margin-bottom: 20px;
     font-weight: ${typography.weight.medium};
     font-size: ${typography.size.m3}rem;
-    border-bottom: 1px solid ${color.gray7};
+    border-bottom: 1px solid ${props => props.theme.gray7};
   }
+`
+
+const MarkdownContent = styled.div`
+  font-size: 100% !important;
 `
 
 export default ({ data }) => {
@@ -59,7 +63,7 @@ export default ({ data }) => {
         <Meta>{post.frontmatter.date} / Share / Edit</Meta>
       </Header>
       <Main>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Main>
     </Content>
   )

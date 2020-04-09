@@ -4,12 +4,12 @@ import styled from "styled-components"
 import { LinkText } from "../components/Common"
 import { Content } from "../components/Layout"
 import SEO from "../components/seo"
-import { spacing, color, typography } from "../constants/styles"
+import { spacing, typography } from "../constants/styles"
 
 const Header = styled.div`
   margin: 32px 0 48px;
   padding-bottom: 48px;
-  border-bottom: 1px solid ${color.gray7};
+  border-bottom: 1px solid ${props => props.theme.gray7};
 
   a {
     &:not(:last-child) {
@@ -31,8 +31,8 @@ const Post = styled.li`
 
   &:not(:last-child) {
     border-bottom: 1px solid;
-    border-bottom-color: ${color.gray7};
-    border-color: ${color.gray7};
+    border-bottom-color: ${props => props.theme.gray7};
+    border-color: ${props => props.theme.gray7};
     margin-bottom: ${spacing.padding.medium}px;
   }
 `
@@ -41,7 +41,7 @@ const Title = styled(Link)`
   text-decoration: none;
 
   h3 {
-    color: ${color.black};
+    color: ${props => props.theme.black};
     display: inline-block;
     font-size: ${typography.size.m2}rem;
     line-height: 1.25;
@@ -56,7 +56,7 @@ const Title = styled(Link)`
 `
 
 const Description = styled.div`
-  color: ${color.gray9};
+  color: ${props => props.theme.gray9};
   font-size: ${typography.size.m1}rem;
   line-height: 1.5;
   font-weight: ${typography.weight.regular};
@@ -64,7 +64,7 @@ const Description = styled.div`
 `
 
 const PostDate = styled.div`
-  color: ${color.gray8};
+  color: ${props => props.theme.gray8};
   font-size: ${typography.size.s2}rem;
   line-height: 1.5;
   font-weight: ${typography.weight.regular};
@@ -73,11 +73,16 @@ const PostDate = styled.div`
 
 const Tag = styled(Link)`
   text-decoration: none;
-  color: ${color.gray8};
+  color: ${props => props.theme.gray8};
   border-bottom: 1px solid;
   border-bottom-color: currentcolor;
   border-color: currentColor;
 `
+
+const activeStyle = {
+  fontWeight: `${typography.weight.medium}`,
+  color: "#6ab0f3",
+}
 
 export default ({ pageContext, data }) => {
   const { category } = pageContext
@@ -87,10 +92,18 @@ export default ({ pageContext, data }) => {
     <Content>
       <SEO title="Blog" />
       <Header>
-        <LinkText to="/blog/">All</LinkText>
-        <LinkText to="/blog/design">Design</LinkText>
-        <LinkText to="/blog/development">Development</LinkText>
-        <LinkText to="/blog/journal">Journal</LinkText>
+        <LinkText activeStyle={activeStyle} to="/blog">
+          All
+        </LinkText>
+        <LinkText activeStyle={activeStyle} to="/blog/design">
+          Design
+        </LinkText>
+        <LinkText activeStyle={activeStyle} to="/blog/development">
+          Development
+        </LinkText>
+        <LinkText activeStyle={activeStyle} to="/blog/journal">
+          Journal
+        </LinkText>
       </Header>
       <PostList>
         {edges.map(({ node }) => {

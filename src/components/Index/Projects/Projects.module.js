@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { color, typography, spacing } from "../../../constants/styles"
+import { typography, spacing } from "../../../constants/styles"
 
 const Wrapper = styled.div`
   display: grid;
@@ -36,7 +36,7 @@ const Title = styled(Link)`
   text-decoration: none;
 
   h3 {
-    color: ${color.black};
+    color: ${props => props.theme.black};
     display: inline-block;
     font-size: ${typography.size.m2}rem;
     line-height: 1.25;
@@ -51,7 +51,7 @@ const Title = styled(Link)`
 `
 
 const Description = styled.div`
-  color: ${color.gray9};
+  color: ${props => props.theme.gray9};
   font-size: ${typography.size.m1}rem;
   line-height: 1.5;
   font-weight: ${typography.weight.regular};

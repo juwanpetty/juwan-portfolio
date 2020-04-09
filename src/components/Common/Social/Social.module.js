@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { color } from "../../../constants/styles"
 
 const Wrapper = styled.div`
   padding: 0;
@@ -13,7 +12,7 @@ const Wrapper = styled.div`
     }
 
     svg {
-      fill: ${color.gray9};
+      fill: ${props => props.theme.gray9};
     }
   }
 `

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { typography, color, breakpoint } from "../../../constants/styles"
+import { typography, breakpoint } from "../../../constants/styles"
 
 export const Meta = styled.div`
   display: grid;
@@ -14,13 +14,14 @@ export const Meta = styled.div`
   }
 
   h3 {
+    color: ${props => props.theme.black};
     font-size: ${typography.size.m2}rem;
     font-weight: ${typography.weight.medium};
     margin: 0 0 24px;
   }
 
   li {
-    color: ${color.gray9};
+    color: ${props => props.theme.gray9};
     font-size: ${typography.size.m1}rem;
     font-weight: ${typography.weight.regular};
 
@@ -31,7 +32,7 @@ export const Meta = styled.div`
 
   a {
     text-decoration: none;
-    color: ${color.gray9};
+    color: ${props => props.theme.gray9};
     font-size: ${typography.size.m1}rem;
     line-height: 1.25;
     font-weight: ${typography.weight.regular};
