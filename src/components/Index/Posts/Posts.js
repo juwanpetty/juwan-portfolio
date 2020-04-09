@@ -42,9 +42,9 @@ export const Posts = () => (
           <HeaderText>Recent posts</HeaderText>
           <div>
             <Paragraph>
-              I enjoy taking some time to think about how we work, design and
-              live, whenever possible. Here are some of my more recent stories
-              and ideas I’ve published.
+              Occasionally I document my journey whether it's with life, design,
+              or development. Here are some of my more recent articles and ideas
+              I’ve published.
             </Paragraph>
             <LinkText to="/blog">See all posts</LinkText>
           </div>

@@ -17,9 +17,10 @@ export const Projects = () => (
       <HeaderText>Latest work</HeaderText>
       <div>
         <Paragraph>
-          I like to stay busy and always have a project in the works. Take a
-          look at some of the applications, articles and companies I've
-          dedicated my time to.
+          I like to stay busy and always have a project in the works. I enjoy
+          designing and building digital products that make expand my knowledge
+          and make an impact on peoples' lives. Take a look at some projects
+          I've dedicated my time to.
         </Paragraph>
       </div>
     </OneColumn>
