@@ -7,6 +7,7 @@ import {
   TopFooter,
   ListWrapper,
   IconContainer,
+  Soon,
 } from "./Footer.module"
 import { Social } from "../../Common"
 
@@ -34,11 +35,17 @@ export const Footer = () => (
           <a href="mailto:jchpetty@gmail.com">Contact</a>
         </LinkGroup>
         <LinkGroup header="Extras">
-          <Link to="/uses">Uses</Link>
-          <Link to="/reading">Reading</Link>
+          <Link to="/">
+            Uses <Soon>Coming Soon</Soon>
+          </Link>
+          <Link to="/">
+            Reading <Soon>Coming Soon</Soon>
+          </Link>
         </LinkGroup>
         <LinkGroup header="Connect">
-          <Link to="/rss">RSS</Link>
+          <Link to="/">
+            RSS <Soon>Coming Soon</Soon>
+          </Link>
         </LinkGroup>
       </ListWrapper>
       <div>

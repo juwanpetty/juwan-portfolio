@@ -58,4 +58,15 @@ const IconContainer = styled.div`
   }
 `
 
-export { Wrapper, List, ListWrapper, TopFooter, IconContainer }
+const Soon = styled.span`
+  font-size: 0.1rem;
+  text-transform: uppercase;
+  color: ${props => props.theme.gray8};
+  background: ${props => props.theme.gray7};
+  padding: 4px 6px;
+  font-weight: ${typography.weight.medium};
+  border-radius: ${spacing.borderRadius.medium}px;
+  margin-left: 8px;
+`
+
+export { Wrapper, List, ListWrapper, TopFooter, IconContainer, Soon }
