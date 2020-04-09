@@ -26,13 +26,6 @@ export const Projects = () => (
 
     <ProjectList>
       <Project>
-        <Image to="/forks-and-knives"></Image>
-        <Title to="/forks-and-knives">
-          <h3>Forks & Knives</h3>
-        </Title>
-        <Description>A collection of recipes</Description>
-      </Project>
-      <Project>
         <Image to="/headlines">
           <img src={headlinesLogo} alt="Headlines project logo" />
         </Image>
