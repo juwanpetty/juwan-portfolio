@@ -28,8 +28,14 @@ const Image = styled(Link)`
   width: 100%;
   height: 240px;
   background: #eee;
-  border-radius: ${spacing.borderRadius.large}px;
   margin-bottom: 16px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: ${spacing.borderRadius.large}px;
+  }
 `
 
 const Title = styled(Link)`

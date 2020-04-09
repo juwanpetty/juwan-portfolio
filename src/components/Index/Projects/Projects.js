@@ -8,6 +8,8 @@ import {
   Description,
 } from "./Projects.module"
 import { HeaderText, Paragraph, OneColumn } from "../../Common/"
+import headlinesLogo from "../../../images/headlines-logo.png"
+import pipLogo from "../../../images/pip-logo.png"
 
 export const Projects = () => (
   <Wrapper>
@@ -24,7 +26,16 @@ export const Projects = () => (
 
     <ProjectList>
       <Project>
-        <Image to="/headlines"></Image>
+        <Image to="/forks-and-knives"></Image>
+        <Title to="/forks-and-knives">
+          <h3>Forks & Knives</h3>
+        </Title>
+        <Description>A collection of recipes</Description>
+      </Project>
+      <Project>
+        <Image to="/headlines">
+          <img src={headlinesLogo} alt="Headlines project logo" />
+        </Image>
         <Title to="/headlines">
           <h3>Headlines</h3>
         </Title>
@@ -34,21 +45,15 @@ export const Projects = () => (
         </Description>
       </Project>
       <Project>
-        <Image to="/project"></Image>
-        <Title to="/project">
-          <h3>Tabio</h3>
+        <Image to="/picture-in-picture">
+          <img src={pipLogo} alt="Picture-in-Picture logo" />
+        </Image>
+        <Title to="/picture-in-picture">
+          <h3>Picture in Picture for Chrome</h3>
         </Title>
         <Description>
-          An open source tab manager made for tab hoarders like you.
-        </Description>
-      </Project>
-      <Project>
-        <Image to="/project"></Image>
-        <Title to="/project">
-          <h3>Analog</h3>
-        </Title>
-        <Description>
-          Replace your new tab page with a minimal analog clock.
+          A browser extension that lets you watch videos in a popup window
+          (always on top of other windows).
         </Description>
       </Project>
     </ProjectList>
