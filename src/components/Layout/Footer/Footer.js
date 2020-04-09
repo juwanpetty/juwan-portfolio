@@ -38,7 +38,6 @@ export const Footer = () => (
           <Link to="/reading">Reading</Link>
         </LinkGroup>
         <LinkGroup header="Connect">
-          <Link to="/newsletter">Newsletter</Link>
           <Link to="/rss">RSS</Link>
         </LinkGroup>
       </ListWrapper>
