@@ -64,7 +64,7 @@ const IconContainer = styled.div`
 `
 
 const Soon = styled.span`
-  font-size: 0.1rem;
+  font-size: 10px;
   text-transform: uppercase;
   color: ${props => props.theme.gray8};
   background: ${props => props.theme.gray7};
