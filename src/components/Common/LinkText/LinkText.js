@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { typography } from "../../../constants/styles"
+import { typography, transition } from "../../../constants/styles"
 
 export const LinkText = styled(Link)`
   text-decoration: none;
@@ -12,4 +12,6 @@ export const LinkText = styled(Link)`
   border-bottom: 1px solid;
   border-bottom-color: currentcolor;
   border-color: currentColor;
+
+  transition: ${transition.fast};
 `

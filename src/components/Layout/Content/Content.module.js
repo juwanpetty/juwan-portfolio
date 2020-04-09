@@ -1,9 +1,10 @@
 import styled from "styled-components"
-import { spacing } from "../../../constants/styles"
+import { spacing, transition } from "../../../constants/styles"
 
 const Container = styled.div`
   background: ${props => props.theme.white};
   width: 100%;
+  transition: ${transition.fast};
 `
 
 const Wrapper = styled.div`

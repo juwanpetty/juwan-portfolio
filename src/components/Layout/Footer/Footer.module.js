@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { typography, spacing } from "../../../constants/styles"
+import { typography, spacing, transition } from "../../../constants/styles"
 
 const Wrapper = styled.div`
   display: grid;
@@ -32,6 +32,8 @@ const List = styled.div`
     font-weight: ${typography.weight.regular};
     text-decoration: none;
 
+    transition: ${transition.fast};
+
     &:not(:last-child) {
       margin-bottom: 16px;
     }
@@ -42,6 +44,8 @@ const List = styled.div`
     font-size: ${typography.size.m2}rem;
     font-weight: ${typography.weight.medium};
     margin: 0 0 24px;
+
+    transition: ${transition.fast};
   }
 `
 
@@ -55,6 +59,7 @@ const IconContainer = styled.div`
     width: 20px;
     height: 20px;
     color: ${props => props.theme.black};
+    transition: ${transition.fast};
   }
 `
 
@@ -67,6 +72,8 @@ const Soon = styled.span`
   font-weight: ${typography.weight.medium};
   border-radius: ${spacing.borderRadius.medium}px;
   margin-left: 8px;
+
+  transition: ${transition.fast};
 `
 
 export { Wrapper, List, ListWrapper, TopFooter, IconContainer, Soon }

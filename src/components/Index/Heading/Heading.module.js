@@ -1,5 +1,10 @@
 import styled from "styled-components"
-import { typography, spacing, breakpoint } from "../../../constants/styles"
+import {
+  typography,
+  spacing,
+  breakpoint,
+  transition,
+} from "../../../constants/styles"
 
 const Wrapper = styled.div`
   margin-top: 32px;
@@ -15,6 +20,7 @@ const Wrapper = styled.div`
     width: 100%;
     height: 1px;
     background: ${props => props.theme.gray7};
+    transition: ${transition.fast};
   }
 `
 
@@ -46,6 +52,8 @@ const Me = styled.div`
     color: ${props => props.theme.black};
     margin: 0;
     margin-bottom: 4px;
+
+    transition: ${transition.fast};
   }
 
   p {
@@ -53,6 +61,8 @@ const Me = styled.div`
     font-weight: ${typography.weight.regular};
     color: ${props => props.theme.gray9};
     margin: 0;
+
+    transition: ${transition.fast};
   }
 `
 
@@ -64,6 +74,8 @@ const Title = styled.h1`
   font-weight: ${typography.weight.medium};
   line-height: 155%;
 
+  transition: ${transition.fast};
+
   a {
     text-decoration: none;
     color: ${props => props.theme.black};
@@ -74,6 +86,8 @@ const Title = styled.h1`
     border-bottom: 1px solid;
     border-bottom-color: currentcolor;
     border-color: currentColor;
+
+    transition: ${transition.fast};
   }
 `
 

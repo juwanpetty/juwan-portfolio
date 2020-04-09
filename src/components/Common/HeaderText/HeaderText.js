@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { typography } from "../../../constants/styles"
+import { typography, transition } from "../../../constants/styles"
 
 export const HeaderText = styled.h2`
   color: ${props => props.theme.black};
@@ -7,4 +7,5 @@ export const HeaderText = styled.h2`
   line-height: 1.25;
   font-weight: ${typography.weight.bold};
   margin: 0;
+  transition: ${transition.fast};
 `

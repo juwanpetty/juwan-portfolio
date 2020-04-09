@@ -67,7 +67,9 @@ export const typography = {
     xl1: 8,
   },
 }
-
+export const transition = {
+  fast: "0.25s",
+}
 export const breakpoint = {
   mobileMin: "590px",
   mobileMax: "700px",

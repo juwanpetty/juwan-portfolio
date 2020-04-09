@@ -2,7 +2,7 @@ import React from "react"
 
 import SEO from "../components/seo"
 import { Content } from "../components/Layout"
-import { spacing, typography } from "../constants/styles"
+import { spacing, typography, transition } from "../constants/styles"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import { LinkText } from "../components/Common"
@@ -11,6 +11,7 @@ const Header = styled.div`
   margin: 32px 0 48px;
   padding-bottom: 48px;
   border-bottom: 1px solid ${props => props.theme.gray7};
+  transition: ${transition.fast};
 
   a {
     &:not(:last-child) {
@@ -29,6 +30,7 @@ const Post = styled.li`
   margin: 0;
   padding: 0;
   padding-bottom: ${spacing.padding.medium}px;
+  transition: ${transition.fast};
 
   &:not(:last-child) {
     border-bottom: 1px solid;
@@ -53,6 +55,8 @@ const Title = styled(Link)`
     border-bottom: 1px solid;
     border-bottom-color: currentcolor;
     border-color: currentColor;
+
+    transition: ${transition.fast};
   }
 `
 
@@ -62,6 +66,8 @@ const Description = styled.div`
   line-height: 1.5;
   font-weight: ${typography.weight.regular};
   max-width: calc(850px / 1.5);
+
+  transition: ${transition.fast};
 `
 
 const PostDate = styled.div`
@@ -70,6 +76,8 @@ const PostDate = styled.div`
   line-height: 1.5;
   font-weight: ${typography.weight.regular};
   margin-bottom: 8px;
+
+  transition: ${transition.fast};
 `
 
 const Tag = styled(Link)`
@@ -78,6 +86,8 @@ const Tag = styled(Link)`
   border-bottom: 1px solid;
   border-bottom-color: currentcolor;
   border-color: currentColor;
+
+  transition: ${transition.fast};
 `
 
 const activeStyle = {

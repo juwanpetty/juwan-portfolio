@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { typography, spacing } from "../../../constants/styles"
+import { typography, spacing, transition } from "../../../constants/styles"
 
 const Wrapper = styled.div`
   display: grid;
@@ -52,6 +52,8 @@ const Title = styled(Link)`
     border-bottom: 1px solid;
     border-bottom-color: currentcolor;
     border-color: currentColor;
+
+    transition: ${transition.fast};
   }
 `
 
@@ -60,6 +62,8 @@ const Description = styled.div`
   font-size: ${typography.size.m1}rem;
   line-height: 1.5;
   font-weight: ${typography.weight.regular};
+
+  transition: ${transition.fast};
 `
 
 export { Wrapper, ProjectList, Project, Image, Title, Description }

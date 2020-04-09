@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { typography, spacing } from "../../../constants/styles"
+import { typography, spacing, transition } from "../../../constants/styles"
 
 const Wrapper = styled.div`
   display: grid;
@@ -19,6 +19,7 @@ const Post = styled.li`
   margin: 0;
   padding: 0;
   padding-bottom: ${spacing.padding.medium}px;
+  transition: ${transition.fast};
 
   &:not(:last-child) {
     border-bottom: 1px solid;
@@ -43,6 +44,8 @@ const Title = styled(Link)`
     border-bottom: 1px solid;
     border-bottom-color: currentcolor;
     border-color: currentColor;
+
+    transition: ${transition.fast};
   }
 `
 
@@ -60,6 +63,8 @@ const PostDate = styled.div`
   line-height: 1.5;
   font-weight: ${typography.weight.regular};
   margin-bottom: 8px;
+
+  transition: ${transition.fast};
 `
 
 const Tag = styled(Link)`
@@ -68,6 +73,8 @@ const Tag = styled(Link)`
   border-bottom: 1px solid;
   border-bottom-color: currentcolor;
   border-color: currentColor;
+
+  transition: ${transition.fast};
 `
 
 export { Wrapper, PostList, Post, Title, Description, PostDate, Tag }

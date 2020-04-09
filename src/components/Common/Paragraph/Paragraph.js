@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { typography } from "../../../constants/styles"
+import { typography, transition } from "../../../constants/styles"
 
 export const Paragraph = styled.p`
   color: ${props => props.theme.gray9};
@@ -7,6 +7,7 @@ export const Paragraph = styled.p`
   line-height: 1.5;
   font-weight: ${typography.weight.regular};
   margin: 0;
+  transition: ${transition.fast};
 
   &:not(:last-child) {
     margin-bottom: 16px;
@@ -22,5 +23,7 @@ export const Paragraph = styled.p`
     border-bottom: 1px solid;
     border-bottom-color: currentcolor;
     border-color: currentColor;
+
+    transition: ${transition.fast};
   }
 `

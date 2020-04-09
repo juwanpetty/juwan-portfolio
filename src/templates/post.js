@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import SEO from "../components/seo"
 import { Content } from "../components/Layout"
-import { typography } from "../constants/styles"
+import { typography, transition } from "../constants/styles"
 import "../constants/markdown-styles.css"
 
 const Header = styled.div`
@@ -21,6 +21,7 @@ const Title = styled.h1`
   font-size: ${typography.size.l1}rem;
   font-weight: ${typography.weight.medium};
   margin-bottom: 8px;
+  transition: ${transition.fast};
 `
 
 const Meta = styled.div`
@@ -29,6 +30,7 @@ const Meta = styled.div`
   line-height: 1.5;
   font-weight: ${typography.weight.regular};
   margin-bottom: 16px;
+  transition: ${transition.fast};
 `
 
 export default ({ data }) => {
