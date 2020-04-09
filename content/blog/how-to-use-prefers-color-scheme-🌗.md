@@ -1,6 +1,6 @@
 ---
 title: How to Use prefers-color-scheme 🌗
-date: "2020-04-09T15:42:10.952Z"
+date: "2020-04-01T15:42:10.952Z"
 category: Development
 description: prefers-color-scheme is a CSS media query that detects the current
   theme preference of the user's operating system.
