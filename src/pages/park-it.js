@@ -22,7 +22,6 @@ import parkitModeling from "../images/parkit-modeling.jpg"
 import parkitResearch from "../images/parkit-research.jpg"
 import parkitMockup from "../images/parkit-mockup.webp"
 import parkitInterview from "../images/parkit-interview.png"
-import pipSettings from "../images/pip-settings.png"
 
 const PictureInPicture = () => (
   <Content>

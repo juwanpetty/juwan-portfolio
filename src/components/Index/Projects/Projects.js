@@ -10,6 +10,7 @@ import {
 import { HeaderText, Paragraph, OneColumn } from "../../Common/"
 import headlinesLogo from "../../../images/headlines-logo.png"
 import pipLogo from "../../../images/pip-logo.png"
+import parkitLogo from "../../../images/parkit-logo.png"
 
 export const Projects = () => (
   <Wrapper>
@@ -52,7 +53,7 @@ export const Projects = () => (
       </Project>
       <Project>
         <Image to="/park-it">
-          <img src={pipLogo} alt="Picture-in-Picture logo" />
+          <img src={parkitLogo} alt="Park It logo" />
         </Image>
         <Title to="/park-it">
           <h3>Park It</h3>
