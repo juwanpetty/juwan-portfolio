@@ -50,6 +50,18 @@ export const Projects = () => (
           (always on top of other windows).
         </Description>
       </Project>
+      <Project>
+        <Image to="/park-it">
+          <img src={pipLogo} alt="Picture-in-Picture logo" />
+        </Image>
+        <Title to="/park-it">
+          <h3>Park It</h3>
+        </Title>
+        <Description>
+          Park It is a mobile parking app that primarily allows for users to
+          easily pay for on-street and off-street parking right from your phone.{" "}
+        </Description>
+      </Project>
     </ProjectList>
   </Wrapper>
 )
